@@ -28,7 +28,7 @@ int Game::GetNumberOfVisibleUnits(Unit* ViewerUnit)
 		}
 
 		float cosBetweenUnits = GetCosBetweenVectors(ViewerUnit->GetForwardVector(), BetweenUnits);
-		if (cosBetweenUnits >= ViewerUnit->VisionZone / 2)
+		if (cosBetweenUnits >= ViewerUnit->VisionZone)
 		{
 			UnitsNum++;
 			ViewerUnit->SetNumOfOtherUnits(UnitsNum);
